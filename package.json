@@ -3,6 +3,20 @@
   "version": "0.0.1",
   "description": "Node.js sample app for OpenShift 3",
   "main": "server.js",
+  "scripts": {
+    "start": "tsc && concurrently \"tsc -w\" \"node server.js\" ",
+    "test": "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings"
+  },
+   "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/angular/angular.io/blob/master/LICENSE"
+    }
+  ],
   "dependencies": {
     "chai": "^3.5.0",
     "chai-http": "^2.0.1",
@@ -38,14 +52,6 @@
   "engine": {
     "node": "*",
     "npm": "*"
-  },
-  "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"node server.js\" ",
-    "test": "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js",
-    "postinstall": "typings install",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings"
   },
   "repository": {
     "type": "git",
