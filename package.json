@@ -7,7 +7,6 @@
     "start": "tsc && concurrently \"tsc -w\" \"node server.js\" ",
     "lite": "lite-server",
     "test": "IP=0.0.0.0 PORT=3030 mocha --timeout 5000 tests/*_test.js",
-    "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w"
   },
